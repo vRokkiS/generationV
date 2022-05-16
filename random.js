@@ -15,6 +15,9 @@ function getJSON() {
   const request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.send();
+  request.onload = () => {
+    console.log(request.responseText);
+  }
   return request.responseText;
 }
 
