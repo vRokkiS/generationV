@@ -8,12 +8,21 @@ console.log("это генератор - " + generator_type);
 
 console.log("../data/" + generator_type + ".json");
 
-var requestURL = "../data/" + generator_type + ".json";
-var request = new XMLHttpRequest();
+const requestURL = "../data/" + generator_type + ".json";
+
+const request = new XMLHttpRequest();
+
 request.open('GET', requestURL);
-request.responseType = 'json';
-console.log(request.response);
-let Data = JSON.parse(request.response);
+
+request.onload = () => {
+  console.log(Response.response);
+}
+
+request.send();
+// request.responseType = 'json';
+
+// console.log(request.response);
+// let Data = JSON.parse(request.response);
 
 console.log(Data);
 
