@@ -1,3 +1,8 @@
+function load() {
+  var sityData = JSON.parse(generator_type);
+  alert(generator_type[0]);
+}
+
 // GENERATOR TYPE
 
 let generator_type_temp = document.location.pathname.split("/")[3];
@@ -18,7 +23,7 @@ console.log("это генератор - " + generator_type);
 
 // randomanime
 
-var sityData = JSON.parse(generator_type);
+
 
 // GET RANDOM VALUE 
 
