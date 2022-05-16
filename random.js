@@ -8,9 +8,10 @@ console.log("это генератор - " + generator_type);
 
 console.log("../data/" + generator_type + ".json");
 
-const requestURL = "../generators/data/" + generator_type + ".json";
+
 
 function getJSON() {
+  const requestURL = "../generators/data/" + generator_type + ".json";
   const request = new XMLHttpRequest();
   request.open('GET', requestURL);
   request.send();
