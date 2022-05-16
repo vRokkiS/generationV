@@ -12,10 +12,9 @@ const requestURL = "../generators/data/" + generator_type + ".json";
 
 function getJSON() {
   const request = new XMLHttpRequest();
-  request.responseType = 'json';
   request.open('GET', requestURL);
   request.send();
-  return request.send();
+  return request.responseText;
 }
 
 let data = getJSON();
