@@ -13,6 +13,7 @@ const requestURL = "../generators/data/" + generator_type + ".json";
 const request = new XMLHttpRequest();
 
 request.open('GET', requestURL);
+request.responseType = 'json';
 
 request.onload = () => {
   console.log(request.response);
@@ -21,7 +22,7 @@ request.onload = () => {
 // 
 
 request.send();
-let data = JSON.parse(request.response);
+let data = request.response;
 
 // GET RANDOM VALUE 
 
