@@ -6,24 +6,31 @@ let generator_type = generator_type_temp.split(".")[0];
 
 console.log("это генератор - " + generator_type);
 
-console.log("../data/" + generator_type + ".json");
 
+// GET JSON
+const requestURL = "../generators/data/" + generator_type + ".json";
 
+function sendRequest(method, url) {
+  return new Promise((resolve, reject) => {
+    const xhr = new XMLHttpRequest();
 
-function getJSON() {
-  const requestURL = "../generators/data/" + generator_type + ".json";
-  const request = new XMLHttpRequest();
-  request.open('GET', requestURL);
-  request.send();
-  request.onload = () => {
-    console.log(request.responseText);
-  }
-  return request.responseText;
+    xhr.open(method, url);
+
+    xhr.responseType = 'json';
+    
+    xhr.send();
+  })
 }
+
+sendRequest('GET', requestURL)
+  .then(data => console.log(data))
+  .catch(err => console.log(err))
 
 let data = getJSON();
 
-
+// xhr.onload = () => {
+//   console.log(xhr.responseText);
+// }
 
 // GET RANDOM VALUE 
 
