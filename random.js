@@ -15,7 +15,7 @@ const request = new XMLHttpRequest();
 request.open('GET', requestURL);
 
 request.onload = () => {
-  console.log(Response.response);
+  console.log(request.response);
 }
 
 request.send();
@@ -24,7 +24,7 @@ request.send();
 // console.log(request.response);
 // let Data = JSON.parse(request.response);
 
-console.log(Data);
+// console.log(Data);
 
 // $(document).ready(function(){
 //   $.getJSON("randomanime.json", function(data){
