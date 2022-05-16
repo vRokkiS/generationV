@@ -15,12 +15,11 @@ function getJSON() {
   request.open('GET', requestURL);
   request.responseType = 'json';
   request.send();
+  return request.responseText;
 }
 
 let data = getJSON();
-request.onload = () => {
-  console.log(request.response);
-}
+
 
 
 // GET RANDOM VALUE 
