@@ -4,8 +4,13 @@ function load() {
 }
 
 $(document).ready(function(){
-  alert(jQuery.fn.jquery);
+  $.getJSON("./" + generator_type, function(data){
+      console.log(data); // Prints: Harry
+      console.log(data[0]); // Prints: 14
+  }).fail(function(){
+      console.log("An error has occurred.");
   });
+});
 
 // GENERATOR TYPE
 
