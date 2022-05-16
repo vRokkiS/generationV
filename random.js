@@ -18,9 +18,10 @@ request.onload = () => {
   console.log(request.response);
 }
 
-// let data = JSON.parse(request.response);
+// 
 
 request.send();
+let data = JSON.parse(request.response);
 
 // GET RANDOM VALUE 
 
