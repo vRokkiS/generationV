@@ -10,19 +10,18 @@ console.log("../data/" + generator_type + ".json");
 
 const requestURL = "../generators/data/" + generator_type + ".json";
 
-const request = new XMLHttpRequest();
+function getJSON() {
+  const request = new XMLHttpRequest();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
+}
 
-request.open('GET', requestURL);
-request.responseType = 'json';
-
+let data = getJSON();
 request.onload = () => {
   console.log(request.response);
 }
 
-// 
-
-request.send();
-let data = request.response;
 
 // GET RANDOM VALUE 
 
