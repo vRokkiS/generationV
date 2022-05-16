@@ -12,7 +12,7 @@ var requestURL = "../data/" + generator_type + ".json";
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
-console.timeLog(request.response);
+console.log(request.response);
 let Data = JSON.parse(request.response);
 
 console.log(Data);
