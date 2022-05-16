@@ -1,7 +1,7 @@
 
 // GENERATOR TYPE
 
-let generator_type_temp = document.location.pathname.split("/")[8];
+let generator_type_temp = document.location.pathname.split("/")[3];
 let generator_type = generator_type_temp.split(".")[0];
 
 console.log("это генератор - " + generator_type);
