@@ -10,8 +10,8 @@ console.log("это генератор - " + generator_type);
 // GET JSON
 const requestURL = "../generators/data/" + generator_type + ".json";
 
-function sendRequest(method, url) {
-  return new Promise((resolve, reject) => {
+function sendRequest() {
+  
     const xhr = new XMLHttpRequest();
 
     xhr.open(method, url);
@@ -19,14 +19,13 @@ function sendRequest(method, url) {
     xhr.responseType = 'json';
     
     xhr.send();
-  })
+    
+    return;
 }
 
-sendRequest('GET', requestURL)
-  .then(data => console.log(data))
-  .catch(err => console.log(err))
+sendRequest();
 
-let data = getJSON();
+let data = sendRequest();
 
 // xhr.onload = () => {
 //   console.log(xhr.responseText);
