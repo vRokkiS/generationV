@@ -15,7 +15,7 @@ function getJSON() {
   request.open('GET', requestURL);
   request.responseType = 'json';
   request.send();
-  return request.responseText;
+  return request.response;
 }
 
 let data = getJSON();
