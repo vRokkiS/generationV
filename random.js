@@ -3,6 +3,10 @@ function load() {
   alert(generator_type[0]);
 }
 
+$(document).ready(function(){
+  alert(jQuery.fn.jquery);
+  });
+
 // GENERATOR TYPE
 
 let generator_type_temp = document.location.pathname.split("/")[3];
