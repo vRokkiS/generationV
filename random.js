@@ -1,20 +1,22 @@
 // GENERATOR TYPE
 
-let generator_type_temp = document.location.pathname.split("/")[2];
+let generator_type_temp = document.location.pathname.split("/")[3];
 let generator_type = generator_type_temp.split(".")[0];
 
 console.log("это генератор - " + generator_type);
 
 // GET JSON FILE
 
-function getFileSity(fileName){
-  let  request = new XMLHttpRequest();
-  request.open('GET', fileName, false);
-  // request.send(null);
-  return  JSON.parse(request.responseText);
-}
+// function getFileSity(fileName){
+//   let  request = new XMLHttpRequest();
+//   request.open('GET', fileName, false);
+//   // request.send(null);
+//   return  JSON.parse(request.responseText);
+// }
 
-let sityData = getFileSity('https://vrokkis.github.io/generationV/generators/data/' + generator_type + '.json');
+// let sityData = getFileSity('https://vrokkis.github.io/generationV/generators/data/' + generator_type + '.json');
+
+// randomanime
 
 // GET RANDOM VALUE 
 
