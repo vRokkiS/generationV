@@ -14,40 +14,13 @@ const request = new XMLHttpRequest();
 
 request.open('GET', requestURL);
 
+request.onload = () => {
+  console.log(request.response);
+}
+
 let data = JSON.parse(request.response);
 
 request.send();
-
-// request.responseType = 'json';
-
-// console.log(request.response);
-// let data = JSON.parse(request.response);
-
-// console.log(Data);
-
-// $(document).ready(function(){
-//   $.getJSON("randomanime.json", function(data){
-//       console.log(data); // Prints: Harry
-//       console.log(data[0]); // Prints: 14
-//   }).fail(function(){
-//       console.log("An error has occurred.");
-//   });
-// });
-
-// GET JSON FILE
-
-// function getFileSity(fileName){
-//   let  request = new XMLHttpRequest();
-//   request.open('GET', fileName, false);
-//   // request.send(null);
-//   return  JSON.parse(request.responseText);
-// }
-
-// let sityData = getFileSity('https://vrokkis.github.io/generationV/generators/data/' + generator_type + '.json');
-
-// randomanime
-
-
 
 // GET RANDOM VALUE 
 
