@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <!-- General -->
+    <title>LoopMinSeven</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="mainHeader">
+        <div>
+        <span class="headerTitle_2">ГЕНЕРАТОРЫ</span>
+        <span class="headerTitle_1"><a href="index.html">LoopMinSeven</a></span>
+        <span class="headerTitle_3">ДЛЯ СЛУЧАЙНЫХ НИШТЯЧКОВ</span><br><br>
+        <span class="headerTitle_4">Выберите генератор!</span>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="mainContainer">
+        <div class="mainContainer_row">
+            <div class="mainContainer_item">
+                <h2>Аниме</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/1.png" alt="cover">
+                    </div>
+                    <a href="/generators/randomanime.html">Выбери аниме для просмотра!</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Дота 2</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/2.png" alt="cover">
+                    </div>
+                    <a href="/generators/dota.html">Не знаешь какого героя пикнуть?</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Лига Легенд</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/3.png" alt="cover">
+                    </div>
+                    <a href="/generators/lol.html">На какую линию пойти в этот раз?</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Музыка</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/4.png" alt="cover">
+                    </div>
+                    <a href="/generators/music.html">Что послушать? Yelawolf? The Strumbellas?</a>
+                </div>
+            </div>
+        </div>
+        <div class="mainContainer_row">
+            <div class="mainContainer_item">
+                <h2>Фильмы</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/5.png" alt="cover">
+                    </div>
+                    <a href="/generators/films.html">Как жаль что нельзя посмотреть Интерстеллар снова</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Животное</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/12.png" alt="cover">
+                    </div>
+                    <a href="/generators/animal.html">Выбери себе тотемное животное</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Сериал</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/13.png" alt="cover">
+                    </div>
+                    <a href="/generators/series.html">Посмотрим сериальчики?</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Хобби</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/8.png" alt="cover">
+                    </div>
+                    <a href="/generators/hobby.html">В мире 1000 занятий, не ограничивай себя 7!</a>
+                </div>
+            </div>
+        </div>
+        <div class="mainContainer_row">
+            <div class="mainContainer_item">
+                <h2>Игры</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/9.png" alt="cover">
+                    </div>
+                    <a href="/generators/games.html">Во что поиграем сегодня?</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Куплинов</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/10.png" alt="cover">
+                    </div>
+                    <a href="/generators/kuplinov.html">Какой плейлист пересмотреть</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Страна</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/11.png" alt="cover">
+                    </div>
+                    <a href="/generators/country.html">Выбери страну для посещения :D</a>
+                </div>
+            </div>
+            <div class="mainContainer_item">
+                <h2>Случайный</h2>
+                <div class="cover">
+                    <div class="coverImage">
+                        <img src="/media/covers/14.png" alt="cover">
+                    </div>
+                    <a href="#" onclick="randomGenerator()">Ожидаемый поворот!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        function getFileSity(fileName){
+            let  request = new XMLHttpRequest();
+            request.open('GET', fileName, false);
+            request.send(null);
+            return  JSON.parse(request.responseText);
+        }
+
+        let randomGeneratorData_table_count = getFileSity('http://loopmin/generators/data/table_count.json');
+        let randomGeneratorData_table_names = getFileSity('http://loopmin/generators/data/table_names.json');
+
+        console.log(randomGeneratorData_table_count[0]["TABLE_COUNT"]);
+        console.log(randomGeneratorData_table_names);
+
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+
+        let random_number = getRandomInt(0, randomGeneratorData_table_count[0]["TABLE_COUNT"]);
+
+        function randomGenerator() {
+            window.location.href = '/generators/' + randomGeneratorData_table_names[random_number]["TABLE_NAME"] + '.html';
+        }
+
+        
+
+    </script>
+</body>
+</html>
