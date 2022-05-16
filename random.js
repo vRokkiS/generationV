@@ -10,7 +10,7 @@ console.log("это генератор - " + generator_type);
 function getFileSity(fileName){
   let  request = new XMLHttpRequest();
   request.open('GET', fileName, false);
-  request.send(null);
+  // request.send(null);
   return  JSON.parse(request.responseText);
 }
 
