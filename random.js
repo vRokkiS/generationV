@@ -20,7 +20,7 @@ function sendRequest() {
     
     xhr.send();
     
-    return;
+    return xhr.response;
 }
 
 sendRequest();
