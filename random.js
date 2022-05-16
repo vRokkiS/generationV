@@ -1,4 +1,3 @@
-
 // GENERATOR TYPE
 
 let generator_type_temp = document.location.pathname.split("/")[2];
@@ -15,7 +14,7 @@ function getFileSity(fileName){
   return  JSON.parse(request.responseText);
 }
 
-let sityData = getFileSity('http://loopmin/generators/data/' + generator_type + '.json');
+let sityData = getFileSity('https://vrokkis.github.io/generationV/generators/data/' + generator_type + '.json');
 
 // GET RANDOM VALUE 
 
