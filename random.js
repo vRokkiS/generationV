@@ -18,7 +18,7 @@ console.log("это генератор - " + generator_type);
 
 // randomanime
 
-var sityData = JSON.parse("./" + generator_type);
+var sityData = JSON.parse(generator_type);
 
 // GET RANDOM VALUE 
 
