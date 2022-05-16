@@ -14,7 +14,7 @@ function sendRequest() {
   
     const xhr = new XMLHttpRequest();
 
-    xhr.open(method, url);
+    xhr.open('GET', requestURL);
 
     xhr.responseType = 'json';
     
