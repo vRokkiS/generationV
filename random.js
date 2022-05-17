@@ -39,3 +39,5 @@ function random() {
   document.getElementById('title_description').textContent  = `${json_info["Title_desc"]}`;
   document.getElementById('description').textContent = `${json_info["Description"]}`;
 }
+
+random();
