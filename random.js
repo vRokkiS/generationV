@@ -40,7 +40,7 @@ function random() {
 
 let generator_info = sendRequest("../generators/data/generators_list.json");
 
-let gid = generator_info.find(generator_type); 
+let gid = generator_info.find(element == generator_type); 
 
 document.getElementById('header_generator_chorus').textContent  = generator_info[gid]["Name"] + ": " + generator_info[gid]["Chorus"];
 
