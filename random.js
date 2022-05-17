@@ -19,10 +19,9 @@ function sendRequest() {
     const xhr = new XMLHttpRequest();
 
     xhr.open('GET', requestURL, false);
-    xhr.responseType = 'json';
     xhr.send();
     
-    return xhr.response;
+    return JSON.parse(xhr.responseText);
 }
 
 // Object.keys(data). length
