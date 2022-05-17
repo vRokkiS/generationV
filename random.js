@@ -22,11 +22,13 @@ function sendRequest() {
     xhr.responseType = 'json';
     xhr.send();
     
-    xhr.onload = () => {
-      console.log(xhr.response);
+    let a = xhr.onload = () => {
+      console.log("1. " + xhr.response);
+      return xhr.response;
     }
 
-    console.log(xhr.response);
+    console.log("2. " + a);
+    console.log("3. " + xhr.response);
 }
 
 // Object.keys(data). length
