@@ -15,9 +15,9 @@ function getRandomInt(min, max) {
 
 // GET JSON 
 
-const requestURL = "../generators/data/" + generator_type + ".json";
+let requestURL = "../generators/data/" + generator_type + ".json";
 
-function sendRequest() {
+function sendRequest(requestURL) {
     const xhr = new XMLHttpRequest();
 
     xhr.open('GET', requestURL, false);
@@ -39,5 +39,9 @@ function random() {
   document.getElementById('title_description').textContent  = `${json_info["Title_desc"]}`;
   document.getElementById('description').textContent = `${json_info["Description"]}`;
 }
+
+let generator_info = sendRequest("../generators/data/generators_list.json");
+
+document.getElementById('header_generator_chorus').textContent  = `${generator_info["Name"]}`;
 
 random();

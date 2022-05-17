@@ -85,12 +85,20 @@ function JSONDB(query, title) {
 
 }
 
+let generators_list = "SELECT * FROM generators_list"
+
+conn.query(generators_list, (err, result) => {
+    fs.writeFileSync('../generators/data/generators_list.json', JSON.stringify(result), function (err) {
+        if (err) throw err;
+    })
+});
+
 // CREATE HTML PAGES
 
-const content = fs.readFileSync('../generators/data/page.txt');;
+const content = fs.readFileSync('../generators/data/page.txt');
 
 for (i = 0; i < table_count; i++) {
-    fs.writeFileSync('../test/' + table_names[i]["TABLE_NAME"] + '.html', content, function (err) {})
+    fs.writeFileSync('../generators/' + table_names[i]["TABLE_NAME"] + '.html', content, function (err) {})
 }
 
 // DB CLOSED

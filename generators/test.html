@@ -16,9 +16,9 @@
     <header class="mainHeader">
         <div>
         <span class="headerTitle_2">ГЕНЕРАТОРЫ</span>
-        <span class="headerTitle_1"><a href="./index.html">LoopMinSeven</a></span>
+        <span class="headerTitle_1"><a href="../index.html">LoopMinSeven</a></span>
         <span class="headerTitle_3">ДЛЯ СЛУЧАЙНЫХ НИШТЯЧКОВ</span><br><br>
-        <span class="headerTitle_4">АНИМЕ: Выбери аниме для просмотра!</span>
+        <span class="headerTitle_4" id="header_generator_chorus">АНИМЕ: Выбери аниме для просмотра!</span>
         </div>
     </header>
 
@@ -30,8 +30,8 @@
             </div>
             <div class="generatorContent">
                 <header class="generatorContent_header">
-                    <span class="title" id="title">Название аниме</span><br>    
-                    <span class="description" id="title_description">Продолжительность</span>
+                    <span class="title" id="title">Название</span><br>    
+                    <span class="description" id="title_description">Дополнительное описание</span>
                 </header>
                 <div class="generatorContent_main">
                     <p id="description">Описание</p>
@@ -41,13 +41,11 @@
 
             <div class="generatorControl">
                 <form>
-                    <input type="button" value="Другое аниме!" onclick="random()" id="updateButton">
+                    <input type="button" value="Сгенерировать!" onclick="random()" id="updateButton">
                 </form>
             </div>
         </div>
-        
     </div>
-    <script type="text/javascript" src="./data/randomanime.json"></script>
     <script src="../random.js"></script>
 </body>
 </html>
