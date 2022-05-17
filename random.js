@@ -22,21 +22,23 @@ function sendRequest() {
     xhr.responseType = 'json';
     xhr.send();
     
-    let data = JSON.parse(xhr.response);
-    console.log(data);
+    xhr.onload = () => {
+      return JSON.parse(xhr.response);
+    }
+    
+}
 
-    let random_number = getRandomInt(0, 10);
+// Object.keys(data).length
+
+let data = sendRequest();
+
+let random_number = getRandomInt(0, 10);
 
     let json_info = data[random_number];
     document.getElementById('image').src = '../media/random/' + generator_type + '/' + `${json_info["ID"]}` + '.jpg';
     document.getElementById('title').textContent = `${json_info["Title"]}`;
     document.getElementById('title_description').textContent  = `${json_info["Title_desc"]}`;
     document.getElementById('description').textContent = `${json_info["Description"]}`;
-}
-
-// Object.keys(data).length
-
-sendRequest();
 
 // let data = sendRequest();
 
