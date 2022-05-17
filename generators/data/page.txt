@@ -41,7 +41,7 @@
 
             <div class="generatorControl">
                 <form>
-                    <input type="button" value="Другое аниме!" onclick="random()" id="updateButton">
+                    <input type="button" value="Сгенерировать!" onclick="random()" id="updateButton">
                 </form>
             </div>
         </div>
