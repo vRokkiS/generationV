@@ -22,7 +22,7 @@ function sendRequest() {
     xhr.responseType = 'json';
     xhr.send();
     
-    xhr.onload = () => {
+    return xhr.onload = () => {
       if (xhr.readyState === 4) {
         if (xhr.status === 200) {
           let data = xhr.response;
@@ -31,8 +31,6 @@ function sendRequest() {
         }
       }
     }
-
-    return data;
 }
 
 // Object.keys(data). length
