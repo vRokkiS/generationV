@@ -18,19 +18,11 @@ const requestURL = "../generators/data/" + generator_type + ".json";
 function sendRequest() {
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', requestURL);
+    xhr.open('GET', requestURL, false);
     xhr.responseType = 'json';
     xhr.send();
     
-    return xhr.onload = () => {
-      if (xhr.readyState === 4) {
-        if (xhr.status === 200) {
-          let data = xhr.response;
-          console.log(data);
-          return data;
-        }
-      }
-    }
+    return xhr.response;
 }
 
 // Object.keys(data). length
