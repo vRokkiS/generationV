@@ -22,18 +22,19 @@ function sendRequest() {
     xhr.responseType = 'json';
     xhr.send();
     
-    let a = xhr.onload = () => {
-      console.log("1. " + xhr.response);
-      return xhr.response;
-    }
-
-    console.log("2. " + a);
-    console.log("3. " + xhr.response);
 }
 
 // Object.keys(data). length
 
-let data = sendRequest();
+ xhr.onload = () => {
+  if (xhr.readyState === 4) {
+    if (xhr.status === 200) {
+      let data = xhr.response;
+      console.log(data);
+    }
+  }
+
+  console.log(data);
 
 let random_number = getRandomInt(0, 10);
 
