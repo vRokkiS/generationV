@@ -40,6 +40,6 @@ function random() {
 
 let generator_info = sendRequest("../generators/data/generators_list.json");
 
-document.getElementById('header_generator_chorus').textContent  = `${generator_info["Name"]}`;
+document.getElementById('header_generator_chorus').textContent  = generator_info["Name"] + ": " + generator_info["Chorus"];
 
 random();
