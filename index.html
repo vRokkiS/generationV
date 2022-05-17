@@ -148,33 +148,6 @@
         </div>
     </div>
 
-    <script>
-
-        function getFileSity(fileName){
-            let  request = new XMLHttpRequest();
-            request.open('GET', fileName, false);
-            request.send(null);
-            return  JSON.parse(request.responseText);
-        }
-
-        let randomGeneratorData_table_count = getFileSity('https://vrokkis.github.io/generationV/generators/data/table_count.json');
-        let randomGeneratorData_table_names = getFileSity('https://vrokkis.github.io/generationV/generators/data/table_names.json');
-
-        console.log(randomGeneratorData_table_count[0]["TABLE_COUNT"]);
-        console.log(randomGeneratorData_table_names);
-
-        function getRandomInt(min, max) {
-            min = Math.ceil(min);
-            max = Math.floor(max);
-            return Math.floor(Math.random() * (max - min)) + min;
-        }
-
-        let random_number = getRandomInt(0, randomGeneratorData_table_count[0]["TABLE_COUNT"]);
-
-        function randomGenerator() {
-            window.location.href = './generators/' + randomGeneratorData_table_names[random_number]["TABLE_NAME"] + '.html';
-        }
-
-    </script>
+    <script src="./index.js"></script>
 </body>
 </html>
