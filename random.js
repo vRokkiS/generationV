@@ -15,8 +15,6 @@ function getRandomInt(min, max) {
 
 // GET JSON 
 
-let requestURL = "../generators/data/" + generator_type + ".json";
-
 function sendRequest(requestURL) {
     const xhr = new XMLHttpRequest();
 
@@ -26,7 +24,7 @@ function sendRequest(requestURL) {
     return JSON.parse(xhr.responseText);
 }
 
-let data = sendRequest();
+let data = sendRequest("../generators/data/" + generator_type + ".json");
 
 // RANDOM
 
