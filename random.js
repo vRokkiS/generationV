@@ -23,12 +23,13 @@ function sendRequest() {
     xhr.send();
     
     xhr.onload = () => {
-      return JSON.parse(xhr.response);
+      console.log(xhr.response);
     }
-    
+
+    console.log(xhr.response);
 }
 
-// Object.keys(data).length
+// Object.keys(data). length
 
 let data = sendRequest();
 
