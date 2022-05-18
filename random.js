@@ -42,10 +42,12 @@ let generator_info = sendRequest("../generators/data/generators_list.json");
 let generator_count_temp = sendRequest("../generators/data/table_count.json");
 let generator_count = generator_count_temp[0]["TABLE_COUNT"];
 
-for (let i = 0; i < generator_count; i++) {
-  let gid = generator_info[i]["Name"].find(element => element === generator_type); 
-}
+let gid = generator_info.find(item => {
+  if (item.PureTitle === generator_type) {
+    return true;
+  }
+})
 
-document.getElementById('header_generator_chorus').textContent  = generator_info[gid]["Name"] + ": " + generator_info[gid]["Chorus"];
+document.getElementById('header_generator_chorus').textContent  = gid["Name"] + ": " + gid["Chorus"];
 
 random();
