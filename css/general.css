@@ -56,6 +56,12 @@ body {
     text-decoration: none;
 }
 
+@media (max-width: 1000px) {
+    .headerTitle_1 a {
+        font-size: 3em;
+    }
+}
+
 .headerTitle_1 a:hover {
     color: #229ff8;
     text-decoration: underline;
@@ -65,12 +71,30 @@ body {
     font-size: 1.5em;
 }
 
+@media (max-width: 1000px) {
+    .headerTitle_2 {
+        font-size: 1.3em;
+    }
+}
+
 .headerTitle_3 {
     font-size: 1.5em;
 }
 
+@media (max-width: 1000px) {
+    .headerTitle_3 {
+        font-size: 1.3em;
+    }
+}
+
 .headerTitle_4 {
     font-size: 1.25em;
+}
+
+@media (max-width: 1000px) {
+    .headerTitle_4 {
+        font-size: 1em;
+    }
 }
 
 .mainContainer {
