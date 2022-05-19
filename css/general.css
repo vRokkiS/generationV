@@ -198,6 +198,12 @@ h1 {
     margin-top: 7.5%;
     margin-bottom: 5%;
 }
+@media (max-width: 1000px) {
+    .generator {
+        flex-direction: column;
+        margin-top: 0;
+    }
+}
 .generatorImage img {
     width: 250px;
     height: 250px;
@@ -205,6 +211,16 @@ h1 {
 }
 .generatorImage {
     margin-right: 50px;
+}
+@media (max-width: 1000px) {
+    .generatorImage {
+        text-align: center;
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+    .generatorContent_header {
+        text-align: center;
+    }
 }
 .generatorContent_header {
     margin-bottom: 15px;
@@ -214,6 +230,9 @@ h1 {
 }
 .generatorContent_header .description {
     color: #959595;
+}
+.generatorControl {
+    text-align: center;
 }
 
 .generatorControl input[type=button] {
@@ -237,4 +256,10 @@ h1 {
     min-width: 366px;
     min-height: 68px;
     border: none;
+}
+@media (max-width: 1000px) {
+    .generatorControl {
+        
+        margin-bottom: 25px;
+    }
 }
