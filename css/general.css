@@ -11,6 +11,7 @@ body {
 }
 
 .mainHeader {
+    margin-top: 25px;
     padding: 15px 0;
     text-align: center;
     height: 15vh;

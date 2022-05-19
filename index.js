@@ -28,8 +28,3 @@ let random_number = getRandomInt(0, randomGeneratorData_table_count[0]["TABLE_CO
 function randomGenerator() {
     window.location.href = './generators/' + randomGeneratorData_table_names[random_number]["TABLE_NAME"] + '.html';
 }
-
-var dpt = window.devicePixelRatio;
-var widthM = window.screen.width;
-var widthH = window.screen.height;
-alert(dpt+' '+widthM+' '+widthH+' '+(widthM*dpt)+' '+(widthH*dpt));
