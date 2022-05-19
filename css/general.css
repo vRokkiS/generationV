@@ -73,7 +73,7 @@ body {
     width: 85vw;
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1000px) {
     .mainContainer_row {
         flex-direction: column;
         align-items: center;
