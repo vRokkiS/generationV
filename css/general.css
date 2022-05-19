@@ -73,6 +73,13 @@ body {
     width: 85vw;
 }
 
+@media (max-width: 544px) {
+    .mainContainer_row {
+        flex-direction: column;
+        align-items: center;
+    }
+}   
+
 .mainContainer_row {
     display: flex;
     flex-direction: row;
@@ -83,6 +90,7 @@ body {
     /* background-color: #000; */
     width: 333px;
     height: 215px;
+    margin: 0 5px;
 }
 
 .mainContainer_item h2 {
