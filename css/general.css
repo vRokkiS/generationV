@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: ;
 }
 
 .mainHeader {
@@ -176,10 +175,6 @@ h1 {
 }
 .generatorContent_header .description {
     color: #959595;
-}
-
-.generatorControl {
-    /* position: fixed; */
 }
 
 .generatorControl input[type=button] {
