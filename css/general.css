@@ -3,7 +3,7 @@
     transition-duration: .2s;
 }
 
-@media (max-width: 544px) {
+@media (max-width: 1000px) {
     * {
         font-size: 12px;
     }
