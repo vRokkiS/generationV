@@ -264,4 +264,7 @@ h1 {
         
         margin-bottom: 25px;
     }
+    .generatorControl input[type=button] {
+        width: 80%;
+    }
 }
