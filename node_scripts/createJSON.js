@@ -98,7 +98,9 @@ conn.query(generators_list, (err, result) => {
 const content = fs.readFileSync('../generators/data/page.txt');
 
 for (i = 0; i < table_count; i++) {
+    if (table_names[i]["TABLE_NAME"] != "generators_list") {
     fs.writeFileSync('../generators/' + table_names[i]["TABLE_NAME"] + '.html', content, function (err) {})
+    }
 }
 
 // DB CLOSED
