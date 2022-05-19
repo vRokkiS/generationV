@@ -266,5 +266,6 @@ h1 {
     }
     .generatorControl input[type=button] {
         width: 80%;
+        min-width: none;
     }
 }
